@@ -1,0 +1,32 @@
+GET http://localhost:5260/users
+Accept: application/json
+Authorization: Bearer secret123
+
+### Ajouter un utilisateur (POST)
+POST http://localhost:5260/users
+Content-Type: application/json
+
+{
+    "Username": "alice",
+    "Usage": "Admin"
+}
+
+### Mettre à jour un utilisateur (PUT)
+PUT http://localhost:5260/users/alice
+Content-Type: application/json
+
+{
+    "Username": "alice",
+    "Usage": "User"
+}
+
+### Supprimer un utilisateur (DELETE)
+DELETE http://localhost:5260/users/alice
+
+### Récupérer la liste des utilisateurs (GET)
+GET http://localhost:5260/users
+Accept: application/json
+
+### Vérifier le nombre d'appels d'une route (GET)
+GET http://localhost:5260/route-count/users
+Accept: application/json
